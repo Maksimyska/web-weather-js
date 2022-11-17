@@ -1,10 +1,7 @@
 const linkTime = "https://proxy.cors.sh/https://timeapi.io/api/Time/current/coordinate?latitude="
-const linkMap = `https://api.open-meteo.com/v1/forecast?latitude=`
-const link = "http://api.openweathermap.org/data/2.5/weather?";
+const link = "https://proxy.cors.sh/http://api.openweathermap.org/data/2.5/weather?";
 const api = "2b12be2dcc32c0aebbc9ddc700d78ea1"
 const root = document.getElementById('add')
-
-
 var elemCount = 0
 
 button__city__input.onclick = function () {
