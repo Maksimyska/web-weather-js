@@ -1,6 +1,6 @@
 const linkTime = "https://proxy.cors.sh/https://timeapi.io/api/Time/current/coordinate?latitude="
 const link = "https://proxy.cors.sh/http://api.openweathermap.org/data/2.5/weather?";
-const api = "0c9127678dcbb8fb8f0e7838462ce731"
+const api = "16e7c93710d9320e4533613abdc91056"
 const root = document.getElementById('add')
 var elemCount = 0
 
