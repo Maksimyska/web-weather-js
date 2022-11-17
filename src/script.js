@@ -38,49 +38,41 @@ let storeTime = {
 
 // Поиск, если введено название города
 const fetchDataCity = async (city) => {
-    try {
-        const result = await fetch(`${link}q=${city}&type=like&APPID=${api}&units=metric&lang=ru`);
-        const data = await result.json();
+    const result = await fetch(`${link}q=${city}&type=like&APPID=${api}&units=metric&lang=ru`);
+    const data = await result.json();
 
-        const { name, coord: { lat, lon, }, main: { feels_like, humidity, pressure, temp, },
-            weather: { 0: { description } }, wind: { speed, }, } = data;
-        store = { ...store, lat, lon, name, feels_like, humidity, pressure, temp, description, speed };
+    const { name, coord: { lat, lon, }, main: { feels_like, humidity, pressure, temp, },
+        weather: { 0: { description } }, wind: { speed, }, } = data;
+    store = { ...store, lat, lon, name, feels_like, humidity, pressure, temp, description, speed };
 
-        const resultTime = await fetch(`${linkTime}${lat}&longitude=${lon}`)
-        const dataTime = await resultTime.json();
+    const resultTime = await fetch(`${linkTime}${lat}&longitude=${lon}`)
+    const dataTime = await resultTime.json();
 
-        const { date, time, dayOfWeek } = dataTime
-        storeTime = { ...storeTime, date, time, dayOfWeek }
+    const { date, time, dayOfWeek } = dataTime
+    storeTime = { ...storeTime, date, time, dayOfWeek }
 
-        createMap(lat, lon)
-        getInfo()
-    } catch (error) {
-        console.log(error)
-    }
+    createMap(lat, lon)
+    getInfo()
 }
 
 
 // Поиск, если введены координаты
 const fetchDataCoor = async (lon, lat) => {
-    try {
-        const result = await fetch(`${link}lat=${lat}&lon=${lon}&appid=${api}&units=metric&lang=ru`);
-        const data = await result.json();
+    const result = await fetch(`${link}lat=${lat}&lon=${lon}&appid=${api}&units=metric&lang=ru`);
+    const data = await result.json();
 
-        const { name, main: { feels_like, humidity, pressure, temp, },
-            weather: { 0: { description } }, wind: { speed, }, } = data;
-        store = { ...store, lat, lon, name, feels_like, humidity, pressure, temp, description, speed };
+    const { name, main: { feels_like, humidity, pressure, temp, },
+        weather: { 0: { description } }, wind: { speed, }, } = data;
+    store = { ...store, lat, lon, name, feels_like, humidity, pressure, temp, description, speed };
 
-        const resultTime = await fetch(`${linkTime}${lat}&longitude=${lon}`)
-        const dataTime = await resultTime.json();
+    const resultTime = await fetch(`${linkTime}${lat}&longitude=${lon}`)
+    const dataTime = await resultTime.json();
 
-        const { date, time, dayOfWeek } = dataTime
-        storeTime = { ...storeTime, date, time, dayOfWeek }
+    const { date, time, dayOfWeek } = dataTime
+    storeTime = { ...storeTime, date, time, dayOfWeek }
 
-        createMap(lat, lon)
-        getInfo()
-    } catch (error) {
-        console.log(error)
-    }
+    createMap(lat, lon)
+    getInfo()
 }
 
 // Добавление картинок, в зависимости от описания
@@ -169,7 +161,6 @@ const createMap = async (lat, lon) => {
             zoom: 8
         });
         elemCount += 1
-        console.log(elemCount);
         deleteMap()
     } catch (error) {
         console.error("Something went wrong", error);
