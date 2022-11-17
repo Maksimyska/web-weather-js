@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #555450;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    gap: 300px;
+    display: flex;
+    max-width: 1920px;
+    margin: 50px auto 0px;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+}
+
+section {
+    max-width: 270px;
+}
+
+/* input */
+
+.about {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input__description {
+    gap: 48px;
+    display: flex;
+}
+
+.description,
+.input {
+    max-height: 308px;
+}
+
+.btn-reset {
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.text__info {
+    margin-bottom: 10px;
+}
+
+.form__text {
+    border: 0;
+    font-size: 16px;
+    color: #CACACA;
+    max-width: 115px;
+    max-height: 60px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-left: 18px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    background-color: #252528;
+}
+
+.btn {
+    color: white;
+    font-size: 16px;
+    max-height: 35px;
+    font-weight: 400;
+    margin-left: 10px;
+    line-height: 20px;
+    padding: 7px 14px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #000000;
+}
+
+.btn-add {
+    margin-left: 0;
+}
+
+.lon-lat {
+    display: flex;
+    align-items: center;
+}
+
+.lon-lat__input {
+    max-width: 134px;
+}
+
+/* info */
+
+.info__city {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.date {
+    gap: 10px;
+    display: flex;
+}
+
+.temp {
+    gap: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.description__img,
+.temp__img {
+    width: 48px;
+}
+
+.description__item {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* add */
+
+.add__weather__list {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}

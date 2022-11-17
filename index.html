@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b22f4a6b-cbc7-4e61-bc57-5e3c655e90fb&lang=ru_RU"
+        type="text/javascript"></script>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="about">
+            <div class="input__description">
+                <section class="input">
+                    <div class="input__city">
+                        <p class="text">Поиск по названию города:</p>
+                        <input type="text" class="form__text" placeholder="Город" id="city__input">
+                        <button class="btn btn-reset" id="button__city__input" type="button" value="ОК">ОК</button>
+                    </div>
+                    <div class="input__coor">
+                        <p class="text">Поиск по широте и долготе:</p>
+                        <div class="lon-lat">
+                            <div class="lon-lat__input">
+                                <input type="text" class="form__text" placeholder="Широта" id="lat__input">
+                                <input type="text" class="form__text" placeholder="Долгота" id="lon__input">
+                            </div>
+                            <button class="btn btn-reset" id="button__coor__input" type="button" value="ОК">ОК</button>
+                        </div>
+                    </div>
+
+                    <div class="add__input">
+                        <!-- <p class="text">Добавить погоду в виджет</p> -->
+                        <button class="btn btn-reset btn-add" id="button__ok" type="button" value="ОК">Добавить погоду в виджет</button>
+                    </div>
+                </section>
+
+                <section class="description" id="description">
+                    <div class="info">
+                        <p class="info__city" id="city"></p>
+                        <div class="date">
+                            <p class="info__dayOTW" id="info__dayOTW"></p>
+                            <p class="info__date" id="info__date"></p>
+                            <p class="info__time" id="info__time"></p>
+                        </div>
+                        <p class="info__desc" id="info__desc"></p>
+                    </div>
+                    <div class="description__item">
+                        <img class="temp__img" id="temp__description" src="#" alt="">
+                        <p class="temp__temp" id="temp"></p>
+                    </div>
+                    <div class="description__item">
+                        <img class="description__img" src="./img/icons/wind.png" alt="Ветер">
+                        <p class="description__text" id="speed"></p>
+                    </div>
+                    <div class="description__item">
+                        <img class="description__img" src="./img/icons/humidity.png" alt="Влажность">
+                        <p class="description__text" id="humidity"></p>
+                    </div>
+                    <div class="description__item">
+                        <img class="description__img" src="./img/icons/gauge.png" alt="Давление">
+                        <p class="description__text" id="pressure"></p>
+                    </div>
+                </section>
+            </div>
+            <section id="app"></section>
+        </div>
+        <section class="add" id="add">
+        </section>
+    </div>
+</body>
+<script src="./src/weather-match.mjs" type="module"></script>
+<script src="./src/script.js"></script>
+
+</html>
